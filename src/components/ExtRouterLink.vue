@@ -1,6 +1,6 @@
 <template>
   <router-link v-if="isRoute" :to="to"><slot/></router-link>
-  <a v-else :href="process.env.BASE_URL + to"><slot/></a>
+  <a v-else :href="outTo"><slot/></a>
 </template>
 
 <script>
@@ -16,6 +16,9 @@ export default {
         return this.$router.options.routes.filter(e => e.path === this.$props.to).length
       }
       return false
+    },
+    outTo () {
+      return process.env.BASE_URL + this.$props.to
     }
   }
 }
