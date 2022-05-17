@@ -1,6 +1,6 @@
 <template>
   <router-link v-if="isRoute" :to="to"><slot/></router-link>
-  <a v-else :href="to"><slot/></a>
+  <a v-else :href="process.env.BASE_URL + to"><slot/></a>
 </template>
 
 <script>
