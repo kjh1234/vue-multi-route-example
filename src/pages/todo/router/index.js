@@ -28,5 +28,6 @@ const routes = [
 export default new VueRouter({
   // https://router.vuejs.org/kr/guide/essentials/history-mode.html
   // mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
