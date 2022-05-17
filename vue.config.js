@@ -9,6 +9,7 @@ const createPage = (name, title, chunk = '', template = undefined) => {
 }
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'git' ? '/vue-multi-route-example' : '/',
   pages: {
     index: createPage('index', 'main'),
     'some_module': createPage('some', '추가', 'some_module'),
