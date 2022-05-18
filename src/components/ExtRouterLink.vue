@@ -18,7 +18,7 @@ export default {
       return false
     },
     outTo () {
-      return process.env.BASE_URL + this.$props.to
+      return process.env.BASE_URL === '/' ? this.$props.to : process.env.BASE_URL + this.$props.to
     }
   }
 }
